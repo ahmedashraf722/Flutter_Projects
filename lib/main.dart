@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/measures_converter.dart';
+import 'package:flutter_projects/time_to_stream/work_timer.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyHome());
 }
 
@@ -13,7 +14,7 @@ class MyHome extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: MeasuresConverter(),
+      home: TimerHomePage(),
     );
   }
 }
