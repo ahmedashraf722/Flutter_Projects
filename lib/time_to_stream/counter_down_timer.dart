@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter_projects/time_to_stream/timer_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CounterDownTimer {
   double _radius = 1;
@@ -7,7 +8,7 @@ class CounterDownTimer {
   Timer timer;
   Duration _time;
   Duration _fullTime;
-  int work = 60;
+  int work = 30;
   int shortBreak = 5;
   int longBreak = 20;
 
@@ -40,7 +41,8 @@ class CounterDownTimer {
     });
   }
 
-  void startWork() {
+  void startWork() async {
+    await readSettings();
     _radius = 1;
     _time = Duration(minutes: this.work, seconds: 0);
     _fullTime = _time;
@@ -63,5 +65,14 @@ class CounterDownTimer {
       seconds: 0,
     );
     _fullTime = _time;
+  }
+
+  Future readSettings() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    work = prefs.getInt('workTime') == null ? 30 : prefs.getInt('workTime');
+    shortBreak =
+        prefs.getInt('shortBreak') == null ? 30 : prefs.getInt('shortBreak');
+    longBreak =
+        prefs.getInt('longBreak') == null ? 30 : prefs.getInt('longBreak');
   }
 }
