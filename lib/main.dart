@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/time_to_stream/work_timer.dart';
+import 'package:flutter_projects/game_pong/pong_game.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,11 +10,11 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Projects',
+      title: 'Pong',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.cyan,
       ),
-      home: TimerHomePage(),
+      home: Pong(),
     );
   }
 }
