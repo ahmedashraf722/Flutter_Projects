@@ -13,6 +13,7 @@ class Bat extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         color: Color(0xffd44000),
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
       ),
     );
   }

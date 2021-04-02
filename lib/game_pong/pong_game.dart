@@ -1,9 +1,9 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/game_pong/ball.dart';
 import 'package:flutter_projects/game_pong/bat.dart';
 import 'package:flutter_projects/game_pong/loading_pong.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 class Pong extends StatefulWidget {
   @override
@@ -35,9 +35,10 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
+    playQRScannerSound();
     posX = 0;
     posY = 0;
-    Future.delayed(Duration(milliseconds: 500), () {
+    Future.delayed(Duration(seconds: 2), () {
       controller = AnimationController(
         vsync: this,
         duration: Duration(hours: 400),
@@ -59,6 +60,15 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
     });
     // controller.repeat();
     super.initState();
+  }
+
+  playQRScannerSound() async {
+    await AssetsAudioPlayer.newPlayer().open(
+      Audio("assets/ponn.wav"),
+      autoStart: true,
+      forceOpen: true,
+      loopMode: LoopMode.single,
+    );
   }
 
   checkBorders(double d) {
@@ -140,7 +150,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
                   Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(builder: (context) => Loading()),
                       (route) => true);
-                 // dispose();
+                  // dispose();
                 },
                 child: Text("No"),
               ),
@@ -167,7 +177,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
         builder: (BuildContext context, BoxConstraints constraints) {
           height = constraints.maxHeight;
           width = constraints.maxWidth;
-          batWidth = width / 2.8;
+          batWidth = width / 3;
           batHeight = height / 25;
           return Stack(
             children: [
@@ -177,12 +187,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
                 left: posX,
               ),
               Positioned(
-                child: Ball(),
-                top: posY,
-                right: posX,
-              ),
-              Positioned(
-                bottom: 1,
+                bottom: 6,
                 left: batPosition,
                 child: GestureDetector(
                   onHorizontalDragUpdate: (DragUpdateDetails update) =>

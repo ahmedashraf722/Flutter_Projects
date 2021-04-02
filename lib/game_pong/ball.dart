@@ -8,7 +8,7 @@ class Ball extends StatefulWidget {
 class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
-    final double d = 35;
+    final double d = 30;
     return Center(
       child: Container(
         width: d,
