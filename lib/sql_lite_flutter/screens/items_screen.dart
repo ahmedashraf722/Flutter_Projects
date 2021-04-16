@@ -20,17 +20,14 @@ class _ItemsScreenState extends State<ItemsScreen> {
   _ItemsScreenState(this.shoppingList);
 
   Future showData(int idList) async {
-    //await helper.openDb();
+    await helper.openDb();
     items = await helper.getItems(idList);
-    setState(() {
-      items = items;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     helper = DbHelper();
-    helper.openDb();
+    //helper.openDb();
     showData(this.shoppingList.id);
     return Scaffold(
       appBar: AppBar(
