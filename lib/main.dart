@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/game_pong/splash_screen.dart';
+import 'package:flutter_projects/sql_lite_flutter/main_screen_list.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,11 +10,11 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pong',
+      title: 'SQLiIteF',
       theme: ThemeData(
-        primarySwatch: Colors.cyan,
+        primarySwatch: Colors.indigo,
       ),
-      home: SplashScreen(),
+      home: MainScreenList(),
     );
   }
 }

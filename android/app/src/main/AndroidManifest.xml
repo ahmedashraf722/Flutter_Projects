@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
    <application
-        android:label="Pong"
+        android:label="SQL"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
