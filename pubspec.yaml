@@ -38,6 +38,9 @@ dependencies:
   http: ^0.13.1
   sqflite: ^2.0.0+3
   path: ^1.8.0
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
 
 dev_dependencies:
   flutter_test:
@@ -49,7 +52,7 @@ dev_dependencies:
 flutter_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/icons/p.png"
+  image_path: "assets/icons/t.png"
 
 
 # The following section is specific to Flutter.

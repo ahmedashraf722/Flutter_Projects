@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "51959471359",
+    "firebase_url": "https://shop-ada35-default-rtdb.firebaseio.com",
+    "project_id": "shop-ada35",
+    "storage_bucket": "shop-ada35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51959471359:android:9108d8f3c91281316440ca",
+        "android_client_info": {
+          "package_name": "com.example.flutter_projects"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51959471359-okjok6bbt5qq8k93ik5g684pi32vmhs9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_projects",
+            "certificate_hash": "2fc63529864621cb9619203ce9d0741c21d86456"
+          }
+        },
+        {
+          "client_id": "51959471359-ku59i10f1jrisjl4uvvlkp19f26r3ue2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZY7UnU2JllCcbXTTLBNabRKINzxf55ZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51959471359-ku59i10f1jrisjl4uvvlkp19f26r3ue2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
