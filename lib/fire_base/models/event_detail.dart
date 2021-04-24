@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class EventDetail {
   String id;
   String _description;
@@ -29,7 +31,7 @@ class EventDetail {
 
   bool get isFavourite => _isFavourite;
 
-  EventDetail.fromMap(dynamic obj) {
+  EventDetail.fromMap(QueryDocumentSnapshot obj) {
     this.id = obj['id'];
     this._description = obj['description'];
     this._date = obj['date'];
