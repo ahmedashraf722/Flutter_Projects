@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/maps_camera/main_map.dart';
+import 'package:flutter_projects/todo__bloc_app/home_page_todo.dart';
 
+//import 'package:flutter_projects/maps_camera/main_map.dart';
 //import 'package:firebase_core/firebase_core.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'fire_base/screens/main_screen.dart';
@@ -19,7 +20,7 @@ class MyHome extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: MainMap(),
+      home: HomePageTodo(),
     );
   }
 
